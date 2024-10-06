@@ -8,14 +8,14 @@ st.markdown("使用这个Streamlit应用程序制作您自己的关于企鹅的�
 
 selected_x_var = st.selectbox(
     "您希望 X轴 变量是什么？",
-    ["喙_长度_mm", "喙_深度_mm", "鳍肢_长度_mm", "身体_质量_g"],
+    ["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"],
 )
 selected_y_var = st.selectbox(
     "那么 Y轴 变量呢?",
-    ["喙_深度_mm", "喙_长度_mm", "鳍肢_长度_mm", "身体_质量_g"],
+    ["bill_depth_mm", "bill_length_mm", "flipper_length_mm", "body_mass_g"],
 )
 
-penguin_file = st.file_uploader("选择您本地的企鹅.CSV")
+penguin_file = st.file_uploader("选择您本地的企鹅 CSV")
 if penguin_file is not None:
     penguins_df = pd.read_csv(penguin_file)
 else:
